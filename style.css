@@ -1,27 +1,47 @@
 body {
   font-family: "Segoe UI", sans-serif;
   background-color: #e8f5e9;
-  text-align: center;
+  margin: 0;
   padding: 20px;
+  text-align: center;
 }
 
 h1 {
   color: #388e3c;
+  margin-bottom: 30px;
 }
 
 #grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 15px;
-  max-width: 1200px;
-  margin: auto;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+
+.semestre {
+  display: flex;
+  flex-direction: column;
+  background-color: #dcedc8;
+  border-radius: 10px;
+  padding: 10px;
+  width: 220px;
+}
+
+.semestre h2 {
+  font-size: 1.1rem;
+  margin: 5px 0 10px;
+  color: #33691e;
+  border-bottom: 2px solid #aed581;
+  padding-bottom: 5px;
 }
 
 .subject {
   background-color: #c8e6c9;
   border: 2px solid #a5d6a7;
-  border-radius: 10px;
-  padding: 10px;
+  border-radius: 8px;
+  margin: 5px 0;
+  padding: 8px;
   transition: 0.3s;
   cursor: pointer;
   user-select: none;
@@ -39,4 +59,17 @@ h1 {
   background-color: #81c784;
   border-color: #66bb6a;
   color: white;
+}
+
+.subject.approved .nombre {
+  text-decoration: line-through;
+}
+
+.nombre {
+  display: block;
+  font-weight: bold;
+}
+
+.creditos {
+  font-size: 0.85rem;
 }
