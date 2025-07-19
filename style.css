@@ -1,29 +1,42 @@
 body {
-  font-family: sans-serif;
+  font-family: "Segoe UI", sans-serif;
+  background-color: #e8f5e9;
   text-align: center;
-  background: #f0f0f0;
-  margin: 0;
-  padding: 1rem;
+  padding: 20px;
+}
+
+h1 {
+  color: #388e3c;
 }
 
 #grid {
   display: grid;
-  grid-template-columns: repeat(20, 25px);
-  grid-template-rows: repeat(20, 25px);
-  gap: 2px;
-  justify-content: center;
-  margin: 20px auto;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 15px;
+  max-width: 1200px;
+  margin: auto;
 }
 
-.cell {
-  width: 25px;
-  height: 25px;
-  background-color: white;
-  border: 1px solid #ccc;
-  transition: background 0.2s;
-}
-
-.cell:hover {
-  background-color: lightblue;
+.subject {
+  background-color: #c8e6c9;
+  border: 2px solid #a5d6a7;
+  border-radius: 10px;
+  padding: 10px;
+  transition: 0.3s;
   cursor: pointer;
+  user-select: none;
+}
+
+.subject.locked {
+  background-color: #f1f8e9;
+  color: #aaa;
+  border-color: #dcedc8;
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+.subject.approved {
+  background-color: #81c784;
+  border-color: #66bb6a;
+  color: white;
 }
